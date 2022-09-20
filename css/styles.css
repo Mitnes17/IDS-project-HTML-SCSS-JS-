@@ -31,7 +31,7 @@ footer {
   background-size: contain;
 }
 
-.itd_play {
+.vic_play {
   background-color: var(--color1);
   display: flex;
   justify-content: center;
@@ -44,11 +44,11 @@ footer {
   transition: all 0.2s ease;
 }
 
-.itd_play:hover {
+.vic_play:hover {
   background-color: var(--color2);
 }
 
-.itd_triangle {
+.vic_triangle {
   margin-right: -3px;
   width: 0;
   height: 0;
@@ -87,3 +87,25 @@ footer {
   width: 100%;
   height: 100%;
 }
+
+
+.color1 {
+    color: var(--color1)
+}
+
+.color2 {
+    color: var(--color2);
+}
+
+.bg {
+    background-color: var(--color1)
+}
+
+.bg2 {
+    background-color: var(--color2);
+}
+
+.someText {
+  color: var(--color2);
+}
+
