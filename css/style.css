@@ -27,8 +27,12 @@ img {
     margin-left: 0px !important;
   }
   .navbar-collapse {
+    padding-top: 20px;
     height: 100vh;
-}
+  }
+  .navbar-collapse li {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -49,6 +53,7 @@ img {
   }
   .navbar-collapse {
     height: 100vh;
+    padding-top: 20px;
 }
 }
 
