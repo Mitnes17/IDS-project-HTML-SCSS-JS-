@@ -1,4 +1,105 @@
-#navbarNavAltMarkup {
-  margin-left: 275.85px;
+.container-fluid {
+  padding-top: 20.5px;
+  padding-bottom: 20.5px;
+  padding-left: 47.11px;
+  padding-right: 60px;
 }
 
+img {
+  width: 105.4px; 
+  height: 68px;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 80.33px;
+    height: 52px;
+  }
+  .container-fluid {
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    padding-left: 36px;
+  }
+  #manage {
+    padding-left: 0px !important;
+  }
+  #downloadBT {
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  img {
+    width: 58.7px;
+    height: 38px;
+  }
+  .container-fluid {
+    padding-top: 8px;
+    padding-bottom: 6.5px;
+    padding-left: 38px;
+  }
+  #manage {
+    padding-left: 0px !important;
+  }
+  #downloadBT {
+    margin-left: 0px !important;
+  }
+}
+
+#about {
+  color: #E76ECE;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#manage {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+
+#about:hover {
+  color: black;
+}
+
+#manage:hover, #solution:hover {
+  color: #E76ECE;
+}
+
+
+.navbar {
+  padding: 0;
+  font-family: 'Ideal Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px #F0F0F0 solid;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+
+
+#downloadBT {
+  width: 180px;
+  height: 48px;
+  background-color: #E76ECE;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+#downloadLink {
+  margin: auto;
+  color: white;
+}
+
+#downloadBT:hover #downloadLink {
+  color:black
+}
