@@ -2,12 +2,7 @@
   padding-top: 20.5px;
   padding-bottom: 20.5px;
   padding-left: 47.11px;
-  padding-right: 60px;
-}
-
-img {
-  width: 105.4px; 
-  height: 68px;
+  padding-right: 47.11px;
 }
 
 @media (max-width: 768px) {
@@ -20,11 +15,8 @@ img {
     padding-bottom: 9.5px;
     padding-left: 36px;
   }
-  #manage {
-    padding-left: 0px !important;
-  }
-  #downloadBT {
-    margin-left: 0px !important;
+  .nav-item .manage {
+    margin-left: 0px;
   }
   .navbar-collapse {
     padding-top: 20px;
@@ -33,6 +25,18 @@ img {
   .navbar-collapse li {
     margin-bottom: 20px;
   }
+  .navbar .container-fluid .navbar-nav a.downloadLink {
+    display: inline-block;
+    text-align: center;
+  }
+  .navbar .container-fluid .navbar-nav li .manage {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .container-fluid .navbar-collapse {
+    text-align: left;
+  }
+  
 }
 
 @media (max-width: 320px) {
@@ -45,19 +49,19 @@ img {
     padding-bottom: 6.5px;
     padding-left: 38px;
   }
-  #manage {
-    padding-left: 0px !important;
-  }
-  #downloadBT {
-    margin-left: 0px !important;
+  .nav-item .manage {
+    margin-left: 0px;
   }
   .navbar-collapse {
     height: 100vh;
     padding-top: 20px;
-}
+  }
+  .navbar .container-fluid .navbar-nav a.downloadLink {
+    padding-left: 10px;
+  }
 }
 
-#about {
+.nav-item .about {
   color: #E76ECE;
 }
 
@@ -67,17 +71,19 @@ body, html {
   box-sizing: border-box;
 }
 
-#manage {
-  padding-left: 120px;
-  padding-right: 120px;
+.navbar-collapse {
+  text-align: center;
 }
 
+.ul-custom {
+  flex: 1;
+}
 
-#about:hover {
+.about:hover {
   color: black;
 }
 
-#manage:hover, #solution:hover {
+.manage:hover, .solution:hover {
   color: #E76ECE;
 }
 
@@ -95,8 +101,8 @@ body, html {
   transition: top 0.3s;
 }
 
-#manage, #solution {
-  font-family: 'Ideal Sans';
+.navbar-nav .manage, .navbar-nav .solution {
+font-family: 'Ideal Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
@@ -105,30 +111,42 @@ text-transform: uppercase;
 color: #000000;
 }
 
+.navbar .container-fluid .navbar-nav .manage {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+
 .navbar-brand {
   padding: 0;
+}
+
+.navbar-nav .manage:hover, .navbar-nav .solution:hover {
+  color: #E76ECE;
 }
 
 .navbar-collapse {
   transition: 0.4s;
 }
 
-
-#downloadBT {
-  width: 180px;
-  height: 48px;
-  background-color: #E76ECE;
-  cursor: pointer;
-  margin-left: 16px;
+.navbar-nav {
+margin-left: 16px;
 }
 
-#downloadLink {
-  margin: auto;
+.navbar .container-fluid a.downloadLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  background-color: #E76ECE;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-#downloadBT:hover #downloadLink {
-  color:black
+.navbar .container-fluid a.downloadLink:hover {
+  color:black;
 }
 
 
@@ -137,6 +155,7 @@ color: #000000;
   height: 20px;
   position: relative;
   transition: .5s ease-in-out;
+  margin-right: 30px;
 }
 
 .navbar-toggler,
@@ -209,3 +228,4 @@ color: #000000;
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #E76ECE;
 }
+
