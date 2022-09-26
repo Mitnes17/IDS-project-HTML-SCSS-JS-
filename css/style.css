@@ -1,3 +1,4 @@
+
 img {
   width: 58.7px;
   height: 38px;
@@ -260,9 +261,9 @@ html {
   .navbar-nav .about {
     color: #e76ece;
   }
-  .navbar-nav .nav-item a:hover{
+  .navbar-nav .nav-item a:hover {
     color: #e76ece;
-}
+  }
   .navbar-nav .nav-item .about:hover {
     color: black;
   }

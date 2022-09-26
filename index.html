@@ -7,51 +7,59 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cosmo.css" />
     <link rel="stylesheet" href="css/secondBlock.css" />
+    <link rel="stylesheet" href="css/footer.css">
     <title>Insomniac❤</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-xl sticky-top" id="jsNavbar">
-      <div class="container-fluid navigation">
-        <a class="navbar-brand" href="#">
-          <img src="img/navLogo.png" alt="logo" />
-        </a>
-        <button
-          class="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#jsNavbarSupportedContent"
-          aria-controls="jsNavbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="jsNavbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-xl-0 ul-custom justify-content-evenly">
-            <li class="nav-item">
-              <a class="nav-link active about" aria-current="page" href="#"
-                >ABOUT US</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link manage" href="#"
-                >KNOWLEDGE MANAGEMENT JOURNEY</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link solution" href="#">KNOWLEDGE SOLUTION</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li>
-              <a class="nav-link active downloadLink" href="#">DOWNLOAD PDF</a>
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-xl sticky-top" id="jsNavbar">
+        <div class="container-fluid navigation">
+          <a class="navbar-brand" href="#">
+            <img src="img/navLogo.png" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#jsNavbarSupportedContent"
+            aria-controls="jsNavbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="jsToggleButton"
+          >
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="jsNavbarSupportedContent">
+            <ul
+              class="navbar-nav mb-2 mb-xl-0 ul-custom justify-content-evenly"
+            >
+              <li class="nav-item">
+                <a class="nav-link active about" aria-current="page" href="#"
+                  >ABOUT US</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link manage" href="#"
+                  >KNOWLEDGE MANAGEMENT JOURNEY</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link solution" href="#">KNOWLEDGE SOLUTION</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li>
+                <a class="nav-link active downloadLink" href="#"
+                  >DOWNLOAD PDF</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <main>
       <section class="firstBlock">
         <div class="container-fluid astronaut">
@@ -111,6 +119,44 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-xxl-7 leftPart">
+            <p class="abLeft">About IDB Knowledge Advisory Services Center</p>
+            <p class="textL">
+              Sed aliquet eleifend dapibus. Aliquam erat volutpat. Aliquam erat
+              volutpat. Curabitur ante lorem, vehicula ut lacinia cursus,
+              posuere nec turpis. Praesent bibendum turpis ut leo porttitor, sit
+              amet tempor turpis convallis. Nullam nec pharetra turpis, sed
+              elementum arcu. Nullam venenatis sit amet justo id euismod. Nulla
+              dictum ligula commodo venenatis luctus. Duis at enim suscipit,
+              luctus nunc eu, varius lacus. Pellentesque habitant morbi
+              tristique senectus et netus et malesuada fames ac turpis egestas.
+              Mauris eu lacus congue, lacinia leo non, facilisis tortor. Nam
+              ultricies enim at dolor porta, at malesuada lorem luctus. Maecenas
+              id porttitor magna. Suspendisse aliquet semper nulla, in aliquam
+              elit auctor quis. Vestibulum vel turpis nibh.
+            </p>
+            <a href="#" class="contact">Contact Us</a>
+            <a href="#" class="cont2"><i class="arrow right"></i>  </a h>
+          </div>
+          <div class="col-12 col-xxl-5 rightPart">
+            <a href="#" class="abRight">About IDB</a>
+            <p class="textR">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              lectus nulla, mollis ac facilisis id, auctor sed justo. Sed ut
+              consectetur massa. Fusce tristique semper justo, ac porta tortor
+              consectetur a. Ut ullamcorper vel eros non efficitur. Fusce eu
+              tortor ipsum. Suspendisse varius interdum dapibus. Suspendisse
+              potenti.
+            </p>
+            <p>© 2021 Insomniac Design Study</p>
+            <p class="created">Website created by Insomniac Design, Inc.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
