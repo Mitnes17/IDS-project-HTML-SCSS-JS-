@@ -46,7 +46,7 @@ function navBar(e) {
 
 
 //toggler event
-const toggler = document.querySelector('.toggler');
+const toggler = document.querySelector('.btn-burger');
 if (toggler) {
   toggler.addEventListener('click', navBar);
 }

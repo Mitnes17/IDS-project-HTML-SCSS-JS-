@@ -1,0 +1,96 @@
+$pink: #e76ece;
+
+.btn-burger {
+  display: none;
+  @media (max-width: 1199px) {
+    outline: none;
+    border: none;
+    background: none;
+    display: block;
+    width: 50px;
+    height: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 15;
+
+    &::before,
+    &::after {
+      content: " ";
+    }
+
+    span,
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $pink;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.3s ease-in-out;
+    }
+
+    span {
+      top: calc(50% - 2px);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &.active {
+      &::before {
+        background-color: black;
+        top: 13px;
+        transform: rotate(135deg);
+      }
+
+      span {
+        opacity: 0;
+        left: -60px;
+      }
+
+      &::after {
+        background-color: black;
+        top: 13px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 36px;
+    height: 24px;
+    padding-bottom: 10px;
+
+    span,
+    &::before,
+    &::after {
+      height: 3px;
+    }
+
+    span {
+      top: calc(50% - 1.5px);
+    }
+
+    &.active {
+      &::after {
+        top: 11px;
+      }
+
+      &::before {
+        top: 11px;
+      }
+    }
+  }
+}

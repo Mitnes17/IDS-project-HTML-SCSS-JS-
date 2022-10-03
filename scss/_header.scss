@@ -1,0 +1,67 @@
+$pink: #e76ece;
+
+.body.active {
+  overflow: hidden;
+}
+
+.header {
+  background-color: white;
+  flex: 1;
+  border-bottom: 1px solid #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: 0.3s;
+
+  .header-container {
+    margin: auto;
+    max-width: 1680px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20.5px 60px 20.5px 47px;
+
+    @media (max-width: 1199px) {
+      padding: 10px 30px 10px 36px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 8px 20px 6px 6.5px;
+    }
+  }
+}
+
+.logo img {
+  position: relative;
+  z-index: 5;
+  height: 68px;
+
+  @media (max-width: 1199px) {
+    position: relative;
+    z-index: 5;
+    height: 52px;
+    width: 80px;
+  }
+
+  @media (max-width: 767px) {
+    width: 58px;
+    height: 38px;
+  }
+}
+
+a {
+  transition: 0.4s;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    transition: 0.2s;
+    color: $pink;
+  }
+}
+
+.page {
+  transition: 0.3s;
+}

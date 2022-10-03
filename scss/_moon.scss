@@ -1,0 +1,31 @@
+.moon__container {
+    display: flex;
+    flex-direction: column;
+}
+.moon__main {
+    display: flex;
+    flex-direction: column;
+    .moon__text {
+        padding: 50px 12px;
+        background-color: #d84e30;
+        color: white;
+        .moon__h {
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .moon__article {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+    }
+
+    .moon__image {
+    }
+}

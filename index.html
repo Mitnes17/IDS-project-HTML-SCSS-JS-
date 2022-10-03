@@ -10,24 +10,29 @@
   <body class="body">
     <header class="header" id="jsHeader">
       <div class="header-container">
-        <a href="#" class="logo"> <img src="img/navLogo.png" alt="" /> </a>
-        <div class="toggler">
-          <span class="top-bar"></span>
-          <span class="middle-bar"></span>
-          <span class="bottom-bar"></span>
+        <a href="/" class="logo">
+          <img src="img/navLogo.png" alt="logo" />
+        </a>
+
+        <button class="btn-burger">
+          <span></span>
+        </button>
+        <!-- button burger -->
+
+        <div class="nav">
+          <nav class="menu-list">
+            <a href="#" class="is-active">about us</a>
+            <a href="#">knowledge management journey</a>
+            <a href="#">knowledge solution</a>
+          </nav>
+
+          <button class="btn btn-primary">
+            <a href="#" class="download-link" download="pdf" title="PDF.pdf"
+              >Download pdf</a
+            >
+          </button>
         </div>
-        <nav class="nav">
-          <ul class="menu-list">
-            <li><a href="#" class="about">ABOUT US</a></li>
-            <li>
-              <a href="#" class="nav-item">KNOWLEDGE MANAGEMENT JOURNEY</a>
-            </li>
-            <li><a href="#" class="nav-item">KNOWLEDGE SOLUTION</a></li>
-          </ul>
-          <ul class="download">
-            <li><a href="" class="donwnload-link"> DOWNLOAD </a></li>
-          </ul>
-        </nav>
+        <!-- menu list  -->
       </div>
     </header>
     <main class="page" id="jsPage">
@@ -43,7 +48,7 @@
         </div>
         <div class="welcome__item">
           <div class="welcome__img">
-            <img src="img/4000_4_08.png" />
+            <img src="img/4000_4_08.png" alt="welcome" />
           </div>
         </div>
       </section>
@@ -59,7 +64,7 @@
             <div class="knowledge-management__img">
               <img
                 src="img/color-seamless-space-pattern_102902-2360.png"
-                alt=""
+                alt="space"
               />
             </div>
             <div class="knowledge-management__front-text">
@@ -76,6 +81,35 @@
           </div>
         </div>
       </section>
+      <!-- <section class="moon">
+        <div class="moon__container">
+          <div class="moon__main">
+            <div class="moon__text">
+              <p class="moon__h">The IDS</p>
+              <p class="moon__article">
+                Donec tristique dolor non lectus tincidunt, a lacinia libero
+                suscipit. Quisque ultrices ex lectus, non lobortis nibh volutpat
+                at. Vivamus auctor urna at nulla vulputate ultricies. Aliquam
+                dictum est elit, a imperdiet ante sollicitudin et. Suspendisse
+                accumsan non mauris vitae cursus. Nullam posuere dignissim arcu,
+                quis dictum quam tempus eget. Sed scelerisque tortor eu
+                hendrerit aliquam. Nullam maximus auctor vulputate. Maecenas in
+                finibus metus.
+              </p>
+            </div>
+            <div class="moon__image">
+              <img class="" src="img/Bitmap.png" alt="img" />
+            </div>
+          </div>
+        </div>
+        <div class="moon__learn-more">
+          <p class="moon__to-learn">
+            To learn even more about IDS’s knowledge solutions, check out IDS’s
+            TED-x style talks and podcasts.
+          </p>
+          <a class="moon__podcast-link" href="#">VIEW PODCASTS</a>
+        </div>
+      </section> -->
     </main>
     <script src="js/index.js"></script>
   </body>
