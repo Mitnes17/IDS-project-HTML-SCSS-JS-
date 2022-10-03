@@ -1,0 +1,129 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    padding-top: 50.5px;
+    padding-bottom: 46px;
+}
+
+.welcome__item:first-child {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 40px;
+
+    .welcome__welcome {
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 45px;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 40px;
+    }
+
+    .welcome__vision {
+        color: #e76ece;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    .welcome__lorem {
+        color: black;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+
+.welcome__item:last-child .welcome__img {
+    display: flex;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome {
+        flex-direction: row;
+        justify-content: center;
+        padding: 44.5px 36px 49px 36px;
+        column-gap: 40px;
+
+        .welcome__item:first-child {
+            padding-top: 25px;
+
+            .welcome__vision {
+                padding-bottom: 30px;
+            }
+        }
+
+        .welcome__item:last-child {
+            .welcome__img {
+                padding-right: 0px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    min-width: 320px;
+                    min-height: 320px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .welcome {
+        max-width: 1214.5px;
+        margin: auto;
+        column-gap: 70.5px;
+        padding-top: 51.5px;
+        padding-left: 100px;
+        padding-right: 0px;
+
+        .welcome__item:first-child {
+            padding-top: 68px;
+            .welcome__welcome {
+                font-size: 70px;
+                font-weight: bold;
+                line-height: 75px;
+                letter-spacing: 0px;
+                text-align: left;
+                padding-bottom: 60px;
+            }
+
+            .welcome__vision {
+                font-family: Helvetica;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0px;
+                text-align: left;
+                padding-bottom: 40px;
+            }
+
+            .welcome__lorem {
+                font-size: 24px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
+        }
+
+        .welcome__item:last-child {
+            .welcome__img img {
+                width: 574px;
+                height: 574px;
+            }
+        }
+    }
+}
