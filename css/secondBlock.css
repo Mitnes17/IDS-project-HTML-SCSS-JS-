@@ -31,8 +31,11 @@
 }
 
 .secondBlock {
+  padding-left: 12px;
+  padding-right: 0px;
+  margin: 0px;
   padding-top: 50px;
-  padding-bottom: 37px;
+  padding-bottom: 20px;
   background: linear-gradient(to right, #f0f0f0 50%, white 50%);
 }
 
@@ -53,6 +56,9 @@
   top: -25.75px;
   background-color: #1996c3;
 }
+.background-shell {
+  padding: 0px;
+}
 
 @media (min-width: 768px) {
   .ids {
@@ -63,6 +69,7 @@
     letter-spacing: 0px;
     text-align: left;
     padding-bottom: 257px;
+    padding-right: 40px;
   }
   .idsAb {
     font-family: "Ideal Sans";
@@ -78,28 +85,53 @@
     color: white;
     padding-top: 70px;
     padding-left: 40px;
-    padding-right: 40px;
+    max-height: 500px;
+    flex: 1;
   }
   .secondBlock {
     padding-top: 0px;
-    padding-left: 24px;
+    padding-left: 36px;
     padding-right: 36px;
     background: #f0f0f0;
+    padding-bottom: 0px;
+    margin-bottom: 140px;
   }
   .frontText {
-    top: -85px;
+    top: 205px;
+    position: absolute;
   }
   .secondBlock .col-12:last-child {
     padding-left: 0px;
+  }
+  .background-shell {
+    display: flex;
+    justify-content: center;
+  }
+  .rightBl {
+    position: relative;
+    width: 388px;
+    height: auto;
+  }
+  .back {
+    position: absolute;
+    width: 388px;
+    height: auto;
   }
 }
 
 @media (min-width: 1200px) {
   .secondBlock {
-    padding-left: 16vh;
+    padding-left: 103px;
+    padding: 0px;
+    margin: 0;
+    margin-bottom: 200px;
+  }
+  .rightBl {
+    position: relative;
+    width: 769px;
   }
   .frontText {
-    top: -249px;
+    top: 277px;
     padding: 34px 115px 73px 115px;
     font-family: Helvetica;
     font-size: 18px;
@@ -108,5 +140,38 @@
     letter-spacing: 0px;
     text-align: left;
     max-width: 769px;
+    position: absolute;
+  }
+  .back {
+    width: 769px;
+    position: absolute;
+    height: 577px;
+    margin-right: 0px;
+  }
+  .knowledge-management {
+    padding-right: 0px;
+  }
+  .secondBlock .leftBl {
+    flex: 1;
+    padding-right: 40px;
+    height: 540px;
+    margin-left: 100px;
+  }
+  .background-shell {
+    margin: 0;
+    padding: 0;
+    max-width: 1318px;
+    height: 100%;
+    margin: auto;
+    align-content: flex-start;
+  }
+  .idsAb {
+    padding-top: 55px;
+    padding-left: 40px;
+  }
+  .ids {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 300px;
   }
 }

@@ -29,13 +29,12 @@
   margin-bottom: 0px;
 }
 
-container-fluid .astronaut {
+.austronaut {
   padding-left: 0px;
   padding-right: 0px;
-}
-.cosmoimg .img-fluid {
-  width: auto;
-  height: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 46px;
 }
 
 .cosmoimg {
@@ -64,11 +63,6 @@ container-fluid .astronaut {
 }
 
 @media (min-width: 768px) {
-  .cosmoimg .img-fluid {
-    width: auto;
-    height: auto;
-  }
-
   .textWel {
     padding-left: 24px;
     padding-top: 69.5px;
@@ -76,30 +70,66 @@ container-fluid .astronaut {
 
   .cosmoimg {
     padding-top: 44.5px;
-    padding-right: 36px;
+    padding-right: 24px;
   }
-  .astronaut {
+  .knowledge-management {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .secondBlock {
+    padding-right: 24px;
+  }
+  .austronaut {
     padding-bottom: 94.5px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 @media (min-width: 1200px) {
+  .textWel {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .welcome {
     font-family: "Ideal Sans";
     font-style: normal;
     font-weight: bold;
-    font-size: 4.16vw;
-    line-height: 4.46vw;
+    font-size: 70px;
+    line-height: 75px;
     padding-bottom: 60px;
   }
-
-  .textWel {
-    padding-left: 16vw;
-    padding-top: 7.11vw;
+  .austro-container {
+    max-width: 1318px;
+    align-items: flex-start;
+    margin: auto;
+    padding-bottom: 0px;
   }
 
+  .austro-container .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .austro-container {
+    padding-top: 52px;
+  }
+
+  .austro-container .textWel {
+    padding-top: 68px;
+    padding-left: 0px;
+    max-width: 570px;
+    margin-right: 0px;
+  }
+
+  .cosmoimg .img-fluid {
+    padding-top: 0px;
+    width: 574px;
+    height: 574px;
+  }
   .cosmoimg {
-    padding-top: 55px;
+    text-align: end;
+    padding-right: 0px;
+    padding-top: 0px;
   }
 
   .vision {
@@ -123,7 +153,8 @@ container-fluid .astronaut {
   .firstBlock {
     padding-bottom: 46px;
   }
-  .astronaut {
+  .austronaut {
     padding-bottom: 120px;
+    padding-left: 103px;
   }
 }

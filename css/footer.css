@@ -114,26 +114,27 @@ i {
   }
 }
 @media (min-width: 1400px) {
-    footer {
-        padding-top: 120px;
-        padding-left: 285px;
-        padding-right: 285px;
-    }
-    .abLeft, .abRight {
-        padding-bottom: 40px;
-    }
-    .textL {
-        padding-bottom: 80px;
-    }
-    .textR {
-        padding-bottom: 105px;
-        margin-bottom: 0px;   
-    }
-    .leftPart {
-        padding-right: 62.5px;
-    }
-    .rightPart {
-        padding-left: 62.5px;
-        padding-right: 50px;
-    }
+  footer {
+    padding-top: 120px;
+    padding-left: 285px;
+    padding-right: 285px;
+  }
+  .abLeft,
+  .abRight {
+    padding-bottom: 40px;
+  }
+  .textL {
+    padding-bottom: 80px;
+  }
+  .textR {
+    padding-bottom: 105px;
+    margin-bottom: 0px;
+  }
+  .leftPart {
+    padding-right: 62.5px;
+  }
+  .rightPart {
+    padding-left: 62.5px;
+    padding-right: 50px;
+  }
 }

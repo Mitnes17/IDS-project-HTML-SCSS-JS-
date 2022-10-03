@@ -1,5 +1,4 @@
-
-img {
+.logo {
   width: 58.7px;
   height: 38px;
 }
@@ -52,10 +51,18 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  background-color: white;
+  max-width: 1680px;
+  margin: auto;
+  flex: 1;
+}
+
+header {
+  top: 0;
   border-bottom: 1px #f0f0f0 solid;
   background-color: white;
-  top: 0;
-  transition: top 0.3s;
+  padding-bottom: 1px;
+  transition: 0.3s;
 }
 
 .navbar-toggler {
@@ -100,7 +107,7 @@ html {
 }
 .navbar-collapse {
   padding-top: 20px;
-  height: 100vh;
+  height: 1000px;
 }
 .navbar-collapse {
   transition: 0.4s;
@@ -192,7 +199,7 @@ html {
 }
 
 @media (min-width: 768px) {
-  img {
+  .logo {
     width: 80.33px;
     height: 52px;
   }
@@ -222,6 +229,10 @@ html {
 }
 
 @media (min-width: 1200px) {
+  .logo {
+    width: 105.4px;
+    height: 68px;
+  }
   .navigation {
     padding-top: 20.5px;
     padding-bottom: 20.5px;
