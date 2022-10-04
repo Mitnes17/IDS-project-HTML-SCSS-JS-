@@ -1,0 +1,104 @@
+.footer {
+  background-color: #003c82;
+  color: white;
+  .footer__container {
+    padding: 50px 12px;
+    h2 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 0px;
+      text-align: left;
+      padding-bottom: 40px;
+    }
+    p,
+    h3 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 1.13px;
+      text-align: left;
+      padding-bottom: 60px;
+    }
+    .footer__left-part {
+      padding-bottom: 64px;
+      .footer__contact {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 1px;
+        text-align: left;
+        padding-bottom: 64px;
+        text-transform: uppercase;
+        color: white;
+        &::after {
+          display: inline-block;
+          content: "";
+          width: 30px;
+          height: 3px;
+          background-color: white;
+          margin-left: 21px;
+          margin-bottom: 3px;
+        }
+      }
+      i {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: -11.5px;
+        display: inline-block;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+    .footer__right-part {
+      h2 {
+        padding-bottom: 35px;
+      }
+      h3 {
+        padding-bottom: 10px;
+      }
+    }
+    @media (min-width: 768px) {
+      padding: 70px 36px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1110px;
+      padding: 120px 0px;
+      margin: auto;
+      display: flex;
+      column-gap: 125px;
+      h2 {
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0px;
+        text-align: left;
+      }
+      p,
+      h3 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 1.13px;
+        text-align: left;
+      }
+      .footer__right-part {
+        flex: 0 0 350px;
+        p {
+          padding-bottom: 110px;
+        }
+        h3 {
+          padding-bottom: 2px;
+        }
+      }
+      .footer__left-part {
+        padding-bottom: 0px;
+        p {
+          padding-bottom: 80px;
+        }
+      }
+    }
+  }
+}

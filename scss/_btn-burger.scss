@@ -2,19 +2,23 @@ $pink: #e76ece;
 
 .btn-burger {
   display: none;
+
   @media (max-width: 1199px) {
-    outline: none;
-    border: none;
-    background: none;
+    position: relative;
     display: block;
     width: 50px;
     height: 30px;
     padding-bottom: 20px;
-    position: relative;
+    border: none;
+    background: none;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
     cursor: pointer;
     z-index: 15;
+
+    &:focus {
+      outline: none;
+    }
 
     &::before,
     &::after {
@@ -29,7 +33,7 @@ $pink: #e76ece;
       height: 4px;
       width: 100%;
       background: $pink;
-      border-radius: 9px;
+      border-radius: 2px;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
@@ -49,21 +53,23 @@ $pink: #e76ece;
     }
 
     &.active {
-      &::before {
+      &::before,
+      &::after {
         background-color: black;
         top: 13px;
+      }
+
+      &::before {
         transform: rotate(135deg);
+      }
+
+      &::after {
+        transform: rotate(-135deg);
       }
 
       span {
         opacity: 0;
         left: -60px;
-      }
-
-      &::after {
-        background-color: black;
-        top: 13px;
-        transform: rotate(-135deg);
       }
     }
   }

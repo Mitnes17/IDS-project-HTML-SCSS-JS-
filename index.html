@@ -8,13 +8,13 @@
     <title>Document</title>
   </head>
   <body class="body">
-    <header class="header" id="jsHeader">
+    <header class="header">
       <div class="header-container">
         <a href="/" class="logo">
           <img src="img/navLogo.png" alt="logo" />
         </a>
 
-        <button class="btn-burger">
+        <button type="button" class="btn-burger">
           <span></span>
         </button>
         <!-- button burger -->
@@ -26,25 +26,22 @@
             <a href="#">knowledge solution</a>
           </nav>
 
-          <button class="btn btn-primary">
-            <a href="#" class="download-link" download="pdf" title="PDF.pdf"
-              >Download pdf</a
-            >
-          </button>
+          <a href="#" class="download-link" download="pdf" title="PDF.pdf"
+            >Download pdf</a
+          >
         </div>
         <!-- menu list  -->
       </div>
     </header>
-    <main class="page" id="jsPage">
+
+    <main class="page">
       <section class="welcome">
         <div class="welcome__item">
-          <p class="welcome__welcome">
+          <h1 class="welcome__welcome">
             Welcome to the insert some lorem copy here
-          </p>
-          <p class="welcome__vision">Vision, Learning, Collaboration.</p>
-          <p class="welcome__lorem">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          </h1>
+          <h3>Vision, Learning, Collaboration.</h3>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
         </div>
         <div class="welcome__item">
           <div class="welcome__img">
@@ -52,14 +49,16 @@
           </div>
         </div>
       </section>
+      <!-- welcome part -->
+
       <section class="knowledge-management">
         <div class="knowledge-management__content">
           <div class="knowledge-management__left">
-            <p class="knowledge-management__about">ABOUT</p>
-            <p class="knowledge-management__ids">
-              IDS's Knowledge Management in Action
-            </p>
+            <h3>ABOUT</h3>
+            <h2>IDS's Knowledge Management in Action</h2>
           </div>
+          <!-- left part  -->
+
           <div class="knowledge-management__right">
             <div class="knowledge-management__img">
               <img
@@ -79,13 +78,16 @@
               </p>
             </div>
           </div>
+          <!-- right part  -->
         </div>
       </section>
-      <!-- <section class="moon">
+      <!-- knowledge part  -->
+
+      <section class="moon">
         <div class="moon__container">
           <div class="moon__main">
             <div class="moon__text">
-              <p class="moon__h">The IDS</p>
+              <h2>The IDS</h2>
               <p class="moon__article">
                 Donec tristique dolor non lectus tincidunt, a lacinia libero
                 suscipit. Quisque ultrices ex lectus, non lobortis nibh volutpat
@@ -97,20 +99,66 @@
                 finibus metus.
               </p>
             </div>
-            <div class="moon__image">
-              <img class="" src="img/Bitmap.png" alt="img" />
-            </div>
+
+            <picture class="moon__image">
+              <source media="(max-width: 767px)" srcset="img/Bitmap.png" />
+              <source
+                media="(min-width: 768px) and (max-width: 1199px)"
+                srcset="img/Bitmap768.png"
+              />
+              <img src="img/Bitmap.png" alt="moon" />
+            </picture>
           </div>
+          <!-- moon main  -->
+
+          <div class="moon__learn-more">
+            <p class="moon__to-learn">
+              To learn even more about IDS’s knowledge solutions, check out
+              IDS’s TED-x style talks and podcasts.
+            </p>
+            <a class="download-link" href="#">VIEW PODCASTS</a>
+          </div>
+          <!-- moon footer  -->
         </div>
-        <div class="moon__learn-more">
-          <p class="moon__to-learn">
-            To learn even more about IDS’s knowledge solutions, check out IDS’s
-            TED-x style talks and podcasts.
-          </p>
-          <a class="moon__podcast-link" href="#">VIEW PODCASTS</a>
-        </div>
-      </section> -->
+      </section>
+      <!-- moon part  -->
     </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__left-part">
+          <h2>About IDB Knowledge Advisory Services Center</h2>
+          <p>
+            Sed aliquet eleifend dapibus. Aliquam erat volutpat. Aliquam erat
+            volutpat. Curabitur ante lorem, vehicula ut lacinia cursus, posuere
+            nec turpis. Praesent bibendum turpis ut leo porttitor, sit amet
+            tempor turpis convallis. Nullam nec pharetra turpis, sed elementum
+            arcu. Nullam venenatis sit amet justo id euismod. Nulla dictum
+            ligula commodo venenatis luctus. Duis at enim suscipit, luctus nunc
+            eu, varius lacus. Pellentesque habitant morbi tristique senectus et
+            netus et malesuada fames ac turpis egestas. Mauris eu lacus congue,
+            lacinia leo non, facilisis tortor. Nam ultricies enim at dolor
+            porta, at malesuada lorem luctus. Maecenas id porttitor magna.
+            Suspendisse aliquet semper nulla, in aliquam elit auctor quis.
+            Vestibulum vel turpis nibh.
+          </p>
+          <a href="#" class="footer__contact">Contact Us</a>
+          <a href="#" class="cont2"><i class="arrow right"></i> </a>
+        </div>
+        <div class="footer__right-part">
+          <h2>About IDB</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            lectus nulla, mollis ac facilisis id, auctor sed justo. Sed ut
+            consectetur massa. Fusce tristique semper justo, ac porta tortor
+            consectetur a. Ut ullamcorper vel eros non efficitur. Fusce eu
+            tortor ipsum. Suspendisse varius interdum dapibus. Suspendisse
+            potenti.
+          </p>
+          <h3>© 2021 Insomniac Design Study</h3>
+          <h3>Website created by Insomniac Design, Inc.</h3>
+        </div>
+      </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>
