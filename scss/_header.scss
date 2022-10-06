@@ -1,13 +1,13 @@
-$pink: #e76ece;
+@import "_vars";
 
 .body.active {
   overflow: hidden;
 }
 
 .header {
-  background-color: white;
+  background-color: $white;
   flex: 1;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid $gray;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +63,7 @@ $pink: #e76ece;
 a {
   transition: 0.4s;
   text-decoration: none;
-  color: black;
+  color: $black;
 
   &:hover {
     transition: 0.2s;

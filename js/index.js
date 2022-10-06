@@ -9,7 +9,7 @@
 (function () {
 const headerHeight = document.querySelector('.header').clientHeight;
 
-document.querySelector('.page').style.paddingTop = `${headerHeight}px`;
+document.querySelector('.main-box').style.paddingTop = `${headerHeight}px`;
 })();
 
 
@@ -17,7 +17,7 @@ document.querySelector('.page').style.paddingTop = `${headerHeight}px`;
 window.addEventListener('resize', function() {
   let headerHeightDin = document.querySelector('.header').clientHeight;
 
-  document.querySelector('.page').style.paddingTop = `${headerHeightDin}px`;
+  document.querySelector('.main-box').style.paddingTop = `${headerHeightDin}px`;
 });
 
 
@@ -30,10 +30,10 @@ window.onscroll = () => {
 
   if (prevScrollpos > currentScrollPos) {
     document.querySelector('.header').style.top = "0";
-    document.querySelector('.page').style.paddingTop = `${headerHeight}px`;
+    document.querySelector('.main-box').style.paddingTop = `${headerHeight}px`;
   } else {
     document.querySelector('.header').style.top = `${-headerHeight}px`;
-    document.querySelector('.page').style.paddingTop = '60px';
+    document.querySelector('.main-box').style.paddingTop = '60px';
   }
   prevScrollpos = currentScrollPos;
 }
@@ -68,4 +68,15 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+//read more button
+let smooth = () => document.querySelector('.hide').classList.toggle('active');
 
+let readMore = () => {
+  document.querySelector('.fishing__hidden-par').classList.toggle('active');
+  document.querySelector('.fishing__toggler').classList.toggle('active');
+  document.querySelector('.fishing__point').classList.toggle('active');
+  document.querySelector('.fishing__points').classList.toggle('active');
+  setTimeout(smooth, 1);
+};
+
+document.querySelector('.fishing__toggler').addEventListener('click', readMore);

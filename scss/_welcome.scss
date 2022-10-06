@@ -1,3 +1,5 @@
+@import "_vars";
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -6,30 +8,30 @@
   padding-bottom: 46px;
 
   .welcome__item:first-child {
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 40px;
 
-    .welcome__welcome {
+    h1 {
       font-size: 40px;
       font-weight: bold;
       line-height: 45px;
       letter-spacing: 0px;
       text-align: left;
-      padding-bottom: 40px;
+      margin-bottom: 40px;
     }
 
     h3 {
-      color: #e76ece;
+      color: $pink;
       text-transform: uppercase;
       font-size: 16px;
       line-height: 24px;
       font-weight: bold;
-      padding-bottom: 30px;
+      margin-bottom: 30px;
     }
 
     h4 {
-      color: black;
+      color: $black;
       font-style: italic;
       font-size: 16px;
       line-height: 24px;
@@ -59,13 +61,14 @@
       padding-top: 25px;
 
       h3 {
-        padding-bottom: 30px;
+        margin-bottom: 30px;
       }
     }
 
     .welcome__item:last-child {
       .welcome__img {
         padding-right: 0px;
+        padding-left: 0px;
 
         img {
           width: 100%;
@@ -88,13 +91,13 @@
     .welcome__item:first-child {
       padding-top: 68px;
 
-      .welcome__welcome {
+      h1 {
         font-size: 70px;
         font-weight: bold;
         line-height: 75px;
         letter-spacing: 0px;
         text-align: left;
-        padding-bottom: 60px;
+        margin-bottom: 60px;
       }
 
       h3 {
@@ -104,10 +107,10 @@
         line-height: 28px;
         letter-spacing: 0px;
         text-align: left;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
       }
 
-      h4 {
+      div p {
         font-size: 24px;
         font-style: italic;
         font-weight: 400;

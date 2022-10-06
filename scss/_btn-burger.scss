@@ -1,4 +1,4 @@
-$pink: #e76ece;
+@import "_vars";
 
 .btn-burger {
   display: none;
@@ -55,7 +55,7 @@ $pink: #e76ece;
     &.active {
       &::before,
       &::after {
-        background-color: black;
+        background-color: $black;
         top: 13px;
       }
 

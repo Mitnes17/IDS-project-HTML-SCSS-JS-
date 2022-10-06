@@ -1,0 +1,113 @@
+@import "_vars";
+
+.fishing__toggler {
+  width: 30px;
+  height: 30px;
+  background: $orange;
+  border-radius: 50%;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: $white;
+    border-radius: 1.25px;
+    position: absolute;
+    transition: 0.3s;
+    top: calc(50% - 1px);
+  }
+
+  &::after {
+    transition: 0.3s ease-in-out;
+    left: calc(50% - 8px);
+    transform: rotate(90deg);
+  }
+
+  &::before {
+    transition: 0.3s ease-in-out;
+    left: calc(50% - 8px);
+  }
+
+  &.active {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 36px;
+    height: 36px;
+
+    &::after,
+    &::before {
+      width: 18px;
+      height: 2px;
+      top: calc(50% - 1px);
+    }
+
+    &::after {
+      left: calc(50% - 9px);
+    }
+
+    &::before {
+      left: calc(50% - 9px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 50px;
+    height: 50px;
+
+    &::after,
+    &::before {
+      width: 26px;
+      height: 4px;
+      top: calc(50% - 2px);
+    }
+
+    &::after {
+      left: calc(50% - 13px);
+    }
+
+    &::before {
+      left: calc(50% - 13px);
+    }
+  }
+}
+
+.fishing__hidden-par {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.7s;
+
+  &.active {
+    transition: 0.7s;
+    opacity: 1;
+  }
+}
+
+.fishing__points {
+  display: "";
+
+  &.active {
+    display: none;
+  }
+}
+
+.fishing__point {
+  display: none;
+
+  &.active {
+    display: inline;
+  }
+}

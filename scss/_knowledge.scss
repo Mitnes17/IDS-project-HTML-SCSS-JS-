@@ -1,16 +1,19 @@
+@import "_vars";
+
 .knowledge-management {
-  background: linear-gradient(to right, #f0f0f0 50%, white 50%);
+  margin-bottom: 50px;
+  background: linear-gradient(to right, $gray 50%, $white 50%);
 }
 
 .knowledge-management__content {
   display: flex;
   flex-direction: column;
-  padding: 50px 0px 25px 12px;
+  padding: 50px 0px 50px 12px;
 
   .knowledge-management__left {
-    background-color: #003c82;
+    background-color: $deep-blue;
     flex: 1;
-    color: white;
+    color: $white;
     padding-top: 50px;
     padding-left: 20px;
     padding-bottom: 86px;
@@ -47,15 +50,15 @@
     .knowledge-management__front-text {
       margin-top: -30px;
 
-      .knowledge-management__sed-metus {
-        color: white;
+      div p {
+        color: $white;
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0px;
         text-align: left;
         padding: 50px 20px;
-        background-color: #1996c3;
+        background-color: $blue;
       }
     }
   }
@@ -69,7 +72,7 @@
       content: "";
       display: inline-block;
       position: absolute;
-      background-color: #f0f0f0;
+      background-color: $gray;
       width: 100%;
       height: 489px;
       z-index: -2;
@@ -80,6 +83,8 @@
     padding-top: 0px;
     padding-left: 36px;
     padding-right: 36px;
+    padding-bottom: 0px;
+    margin-bottom: 70px;
     align-items: flex-start;
     .knowledge-management__left {
       box-sizing: border-box;
@@ -114,7 +119,7 @@
       .knowledge-management__front-text {
         margin-top: -85px;
         width: 100%;
-        .knowledge-management__sed-metus {
+        p {
           padding: 50px;
         }
       }
@@ -124,20 +129,25 @@
 
 @media (min-width: 1200px) {
   .knowledge-management {
+    margin-bottom: 120px;
+
     &::before {
       height: 540px;
     }
+
     .knowledge-management__content {
       margin: auto;
       margin-top: 71px;
       max-width: 1214px;
       padding-right: 0px;
       padding-left: 100px;
+
       .knowledge-management__left {
         padding: 120px 50px 233px 108.5px;
         box-sizing: border-box;
         max-width: 445px;
         height: auto;
+
         h3 {
           font-size: 18px;
           font-weight: 400;
@@ -146,21 +156,21 @@
           text-align: left;
           padding-bottom: 40px;
         }
+
         h2 {
           font-size: 32px;
           font-weight: 400;
           line-height: 40px;
           letter-spacing: 0px;
           text-align: left;
-          // padding-right: 100px;
         }
       }
       .knowledge-management__right {
         .knowledge-management__img {
           display: flex;
-          // flex: 1;
           column-gap: 0px;
           justify-content: end;
+
           img {
             width: 100%;
             max-width: 769px;
@@ -168,7 +178,7 @@
           }
         }
 
-        .knowledge-management__sed-metus {
+        .knowledge-management__front-text p {
           margin-top: -190px;
           font-family: Helvetica;
           font-size: 18px;

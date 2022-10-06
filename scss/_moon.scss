@@ -1,3 +1,5 @@
+@import "_vars";
+
 .moon__container {
   display: flex;
   flex-direction: column;
@@ -5,12 +7,12 @@
   .moon__main {
     padding-top: 20px;
     padding-bottom: 20px;
-    background: linear-gradient(to right, #eff9fd 50%, white 50%);
+    background: linear-gradient(to right, $cyan-gray 50%, $white 50%);
 
     .moon__text {
       padding: 50px 12px;
-      background-color: #d84e30;
-      color: white;
+      background-color: $dark-orange;
+      color: $white;
 
       h2 {
         font-size: 30px;
@@ -22,7 +24,7 @@
         padding-bottom: 20px;
       }
 
-      .moon__article {
+      div p {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
@@ -40,7 +42,7 @@
   .moon__learn-more {
     padding-bottom: 50px;
 
-    .moon__to-learn {
+    p {
       font-size: 18px;
       font-style: italic;
       font-weight: 400;
@@ -78,7 +80,7 @@
         z-index: -1;
         height: 70%;
         width: 60%;
-        background-color: #eff9fd;
+        background-color: $cyan-gray;
       }
 
       .moon__text {
@@ -107,7 +109,7 @@
       align-items: center;
       padding: 20px 36px 40px 93px;
 
-      .moon__to-learn {
+      p {
         padding: 0;
         flex: 2;
       }
@@ -139,7 +141,7 @@
           text-align: left;
         }
 
-        .moon__article {
+        div p {
           font-family: Helvetica;
           font-size: 20px;
           font-weight: 400;
@@ -157,7 +159,7 @@
       justify-content: space-between;
       padding: 80px 113px 80px 105px;
 
-      .moon__to-learn {
+      p {
         max-width: 640px;
         font-size: 22px;
         font-weight: 400;
@@ -187,7 +189,7 @@
         z-index: -1;
         height: 64%;
         width: 50%;
-        background-color: #eff9fd;
+        background-color: $cyan-gray;
       }
     }
   }

@@ -6,7 +6,7 @@
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     display: flex;
     flex-direction: column;
     font-size: 30px;
@@ -93,17 +93,17 @@
   padding-bottom: 46px;
 }
 .welcome .welcome__item:first-child {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-bottom: 40px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 40px;
 }
-.welcome .welcome__item:first-child .welcome__welcome {
+.welcome .welcome__item:first-child h1 {
   font-size: 40px;
   font-weight: bold;
   line-height: 45px;
   letter-spacing: 0px;
   text-align: left;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 .welcome .welcome__item:first-child h3 {
   color: #e76ece;
@@ -111,7 +111,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 .welcome .welcome__item:first-child h4 {
   color: black;
@@ -142,10 +142,11 @@
     padding-top: 25px;
   }
   .welcome .welcome__item:first-child h3 {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
   .welcome .welcome__item:last-child .welcome__img {
     padding-right: 0px;
+    padding-left: 0px;
   }
   .welcome .welcome__item:last-child .welcome__img img {
     width: 100%;
@@ -167,13 +168,13 @@
   .welcome .welcome__item:first-child {
     padding-top: 68px;
   }
-  .welcome .welcome__item:first-child .welcome__welcome {
+  .welcome .welcome__item:first-child h1 {
     font-size: 70px;
     font-weight: bold;
     line-height: 75px;
     letter-spacing: 0px;
     text-align: left;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
   .welcome .welcome__item:first-child h3 {
     font-family: Helvetica;
@@ -182,9 +183,9 @@
     line-height: 28px;
     letter-spacing: 0px;
     text-align: left;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
-  .welcome .welcome__item:first-child h4 {
+  .welcome .welcome__item:first-child div p {
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -199,13 +200,14 @@
 }
 
 .knowledge-management {
+  margin-bottom: 50px;
   background: linear-gradient(to right, #f0f0f0 50%, white 50%);
 }
 
 .knowledge-management__content {
   display: flex;
   flex-direction: column;
-  padding: 50px 0px 25px 12px;
+  padding: 50px 0px 50px 12px;
 }
 .knowledge-management__content .knowledge-management__left {
   background-color: #003c82;
@@ -241,7 +243,7 @@
 .knowledge-management__content .knowledge-management__right .knowledge-management__front-text {
   margin-top: -30px;
 }
-.knowledge-management__content .knowledge-management__right .knowledge-management__front-text .knowledge-management__sed-metus {
+.knowledge-management__content .knowledge-management__right .knowledge-management__front-text div p {
   color: white;
   font-size: 16px;
   font-weight: 400;
@@ -271,6 +273,8 @@
     padding-top: 0px;
     padding-left: 36px;
     padding-right: 36px;
+    padding-bottom: 0px;
+    margin-bottom: 70px;
     align-items: flex-start;
   }
   .knowledge-management__content .knowledge-management__left {
@@ -304,11 +308,14 @@
     margin-top: -85px;
     width: 100%;
   }
-  .knowledge-management__content .knowledge-management__right .knowledge-management__front-text .knowledge-management__sed-metus {
+  .knowledge-management__content .knowledge-management__right .knowledge-management__front-text p {
     padding: 50px;
   }
 }
 @media (min-width: 1200px) {
+  .knowledge-management {
+    margin-bottom: 120px;
+  }
   .knowledge-management::before {
     height: 540px;
   }
@@ -351,7 +358,7 @@
     max-width: 769px;
     max-height: 576px;
   }
-  .knowledge-management .knowledge-management__content .knowledge-management__right .knowledge-management__sed-metus {
+  .knowledge-management .knowledge-management__content .knowledge-management__right .knowledge-management__front-text p {
     margin-top: -190px;
     font-family: Helvetica;
     font-size: 18px;
@@ -385,7 +392,7 @@
   text-align: left;
   padding-bottom: 20px;
 }
-.moon__container .moon__main .moon__text .moon__article {
+.moon__container .moon__main .moon__text div p {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -399,7 +406,7 @@
 .moon__container .moon__learn-more {
   padding-bottom: 50px;
 }
-.moon__container .moon__learn-more .moon__to-learn {
+.moon__container .moon__learn-more p {
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
@@ -459,7 +466,7 @@
     align-items: center;
     padding: 20px 36px 40px 93px;
   }
-  .moon__container .moon__learn-more .moon__to-learn {
+  .moon__container .moon__learn-more p {
     padding: 0;
     flex: 2;
   }
@@ -489,7 +496,7 @@
     letter-spacing: 0px;
     text-align: left;
   }
-  .moon__container .moon__main .moon__text .moon__article {
+  .moon__container .moon__main .moon__text div p {
     font-family: Helvetica;
     font-size: 20px;
     font-weight: 400;
@@ -504,7 +511,7 @@
     justify-content: space-between;
     padding: 80px 113px 80px 105px;
   }
-  .moon__container .moon__learn-more .moon__to-learn {
+  .moon__container .moon__learn-more p {
     max-width: 640px;
     font-size: 22px;
     font-weight: 400;
@@ -759,6 +766,7 @@ a:hover {
   padding-bottom: 64px;
   text-transform: uppercase;
   color: white;
+  position: relative;
 }
 .footer .footer__container .footer__left-part .footer__contact::after {
   display: inline-block;
@@ -769,15 +777,15 @@ a:hover {
   margin-left: 21px;
   margin-bottom: 3px;
 }
-.footer .footer__container .footer__left-part i {
+.footer .footer__container .footer__left-part .footer__contact i {
   border: solid white;
   border-width: 0 3px 3px 0;
-  display: inline-block;
   padding: 3px;
-  margin-left: -11.5px;
+  position: absolute;
+  margin-top: 5.5px;
+  margin-left: 44px;
   display: inline-block;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }
 .footer .footer__container .footer__right-part h2 {
   padding-bottom: 35px;
@@ -829,6 +837,406 @@ a:hover {
   .footer .footer__container .footer__left-part p {
     padding-bottom: 80px;
   }
+}
+
+.fishing__main .fishing__voldemort {
+  display: flex;
+  flex-direction: column;
+}
+.fishing__main .fishing__voldemort .fishing__figure {
+  position: relative;
+  padding-left: 12px;
+}
+.fishing__main .fishing__voldemort .fishing__figure::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 100%;
+  background: #1996c3;
+  left: 0;
+  top: 0;
+  border-top: 1px solid white;
+}
+.fishing__main .fishing__voldemort .fishing__figure img {
+  width: 100%;
+  height: 100%;
+}
+.fishing__main .fishing__voldemort .fishing__voldemort-text {
+  margin-top: -26%;
+  position: relative;
+  padding-left: 12px;
+}
+.fishing__main .fishing__voldemort .fishing__voldemort-text::before {
+  content: "";
+  width: 12px;
+  background-color: white;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid white;
+}
+.fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap {
+  color: white;
+  padding: 50px 88px 30px 20px;
+  background: #8dc63f;
+}
+.fishing__main .fishing__voldemort .fishing__voldemort-text h3 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.fishing__main .fishing__voldemort .fishing__voldemort-text h4 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.fishing__main .fishing__text {
+  margin-left: 12px;
+  background: #eff9fd;
+  padding: 50px 20px;
+  margin-bottom: 50px;
+}
+.fishing__main .fishing__text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.fishing__main .fishing__text h3 {
+  font-family: Mercury Text G2;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #e76ece;
+  margin-bottom: 30px;
+}
+.fishing__main .fishing__text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .fishing__main {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure {
+    padding-left: 36px;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure img {
+    width: 100%;
+    min-width: 308px;
+    padding-left: 0;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure::before {
+    width: 36px;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text::before {
+    display: inline-block;
+    width: 36px;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap {
+    padding: 50px 46px 243px 46px;
+  }
+  .fishing__main .fishing__text {
+    padding: 70px 60px;
+    margin-left: 0px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    margin-right: 36px;
+    position: relative;
+  }
+  .fishing__main .fishing__text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -36px;
+    width: 36px;
+    background: #d84e30;
+    height: 71%;
+  }
+  .fishing__main .fishing__text h2 {
+    margin-bottom: 17px;
+  }
+  .fishing__main .fishing__text h3 {
+    margin-bottom: 33px;
+  }
+}
+@media (min-width: 1200px) {
+  .fishing__main {
+    margin: auto;
+    max-width: 1214px;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure {
+    -o-object-fit: contain;
+       object-fit: contain;
+    overflow: hidden;
+    position: "";
+    padding-left: 0px;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure::before {
+    display: none;
+  }
+  .fishing__main .fishing__voldemort .fishing__figure img {
+    width: auto;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text {
+    position: "";
+    padding-left: 0;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text::before {
+    display: none;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap {
+    padding: 41px 65px 59px 65px;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap h3 {
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-style: normal;
+    margin-bottom: 18px;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap h4 {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-style: normal;
+    padding-bottom: 0;
+    margin-bottom: 11px;
+  }
+  .fishing__main .fishing__voldemort .fishing__voldemort-text .fishing__voldemort-text-wrap h4:last-child {
+    margin-bottom: 0px;
+  }
+  .fishing__main .fishing__text {
+    padding: 120px 114px 93px 115px;
+    margin-top: 120px;
+    margin-right: 0;
+  }
+  .fishing__main .fishing__text::after {
+    display: none;
+  }
+  .fishing__main .fishing__text h2 {
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .fishing__main .fishing__text h3 {
+    font-family: Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-style: normal;
+    margin-bottom: 30px;
+  }
+  .fishing__main .fishing__text p {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+
+.fishing__read-more {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.fishing__read-more .fishing__toggler {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .fishing__read-more {
+    margin-bottom: 43px;
+  }
+  .fishing__read-more .fishing__toggler-wrap {
+    display: flex;
+    padding: 0 99px;
+  }
+  .fishing__read-more .fishing__toggler-wrap p {
+    margin-left: 35px;
+    flex: 1;
+  }
+  .fishing__read-more .fishing__hidden-par {
+    padding-left: 169px;
+    padding-right: 99px;
+  }
+}
+@media (min-width: 1200px) {
+  .fishing__read-more {
+    max-width: 860px;
+    margin: auto;
+    padding-left: 0px;
+    margin-bottom: 120px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-style: normal;
+  }
+  .fishing__read-more .fishing__toggler-wrap {
+    padding: 0px;
+    font-family: Helvetica;
+  }
+  .fishing__read-more .fishing__toggler-wrap .fishing__toggler {
+    margin-bottom: 0px;
+  }
+  .fishing__read-more .fishing__toggler-wrap p {
+    margin-left: 50px;
+  }
+  .fishing__read-more .fishing__hidden-par {
+    padding: 0;
+    padding-left: 100px;
+    margin: auto;
+    font-family: Helvetica;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fishing__container {
+    display: grid;
+    grid-template-columns: auto 1214px auto;
+    margin-bottom: 100px;
+  }
+  .fishing__container .fishing__blue {
+    background: linear-gradient(#1996c3 514px, white 275px);
+    padding-right: 100px;
+  }
+  .fishing__container .fishing__red {
+    background: linear-gradient(to top, #d84e30 423px, white 275px);
+  }
+}
+
+.fishing__toggler {
+  width: 30px;
+  height: 30px;
+  background: #f37e26;
+  border-radius: 50%;
+  position: relative;
+}
+.fishing__toggler::after, .fishing__toggler::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: white;
+  border-radius: 1.25px;
+  position: absolute;
+  transition: 0.3s;
+  top: calc(50% - 1px);
+}
+.fishing__toggler::after {
+  transition: 0.3s ease-in-out;
+  left: calc(50% - 8px);
+  transform: rotate(90deg);
+}
+.fishing__toggler::before {
+  transition: 0.3s ease-in-out;
+  left: calc(50% - 8px);
+}
+.fishing__toggler.active::after {
+  transform: rotate(180deg);
+}
+@media (min-width: 768px) {
+  .fishing__toggler {
+    width: 36px;
+    height: 36px;
+  }
+  .fishing__toggler::after, .fishing__toggler::before {
+    width: 18px;
+    height: 2px;
+    top: calc(50% - 1px);
+  }
+  .fishing__toggler::after {
+    left: calc(50% - 9px);
+  }
+  .fishing__toggler::before {
+    left: calc(50% - 9px);
+  }
+}
+@media (min-width: 1200px) {
+  .fishing__toggler {
+    width: 50px;
+    height: 50px;
+  }
+  .fishing__toggler::after, .fishing__toggler::before {
+    width: 26px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  .fishing__toggler::after {
+    left: calc(50% - 13px);
+  }
+  .fishing__toggler::before {
+    left: calc(50% - 13px);
+  }
+}
+
+.fishing__hidden-par {
+  display: none;
+}
+.fishing__hidden-par.active {
+  display: block;
+}
+
+.hide {
+  opacity: 0;
+  transition: 0.7s;
+}
+.hide.active {
+  transition: 0.7s;
+  opacity: 1;
+}
+
+.fishing__points {
+  display: "";
+}
+.fishing__points.active {
+  display: none;
+}
+
+.fishing__point {
+  display: none;
+}
+.fishing__point.active {
+  display: inline;
 }
 
 @font-face {

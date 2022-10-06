@@ -1,11 +1,10 @@
-$font: "Ideal Sans";
-$pink: #e76ece;
+@import "_vars";
 
 .download-link {
   display: inline-block;
   text-align: left;
   align-self: flex-start;
-  color: white;
+  color: $white;
   background-color: $pink;
   padding-left: 26px;
   padding-right: 26px;
@@ -17,7 +16,7 @@ $pink: #e76ece;
 
   &:hover {
     transition: 0.4s;
-    color: black;
+    color: $black;
   }
 
   @media (max-width: 1199px) {
