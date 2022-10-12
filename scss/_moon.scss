@@ -179,6 +179,8 @@
 @media (min-width: 1200px) {
   .moon {
     position: relative;
+    padding-left: 36px;
+    padding-right: 36px;
 
     .moon__container {
       &::before {

@@ -341,15 +341,19 @@
 .fishing__container {
   @media (min-width: 1200px) {
     display: grid;
-    grid-template-columns: auto 1214px auto;
+    grid-template-columns: auto minmax(1064px, 1214px) auto;
     margin-bottom: 100px;
+    column-gap: 0px;
+
     .fishing__blue {
       background: linear-gradient($blue 514px, $white 275px);
       padding-right: 100px;
     }
 
     .fishing__red {
+      padding-right: 36px;
       background: linear-gradient(to top, $dark-orange 423px, $white 275px);
     }
   }
 }
+//fishing grid 1200px+

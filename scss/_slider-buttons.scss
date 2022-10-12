@@ -1,0 +1,95 @@
+@import "_vars";
+
+.slider__container {
+    .slider__btn-container {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .slider__btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 3;
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 1px;
+                background: linear-gradient(to right, #f8f8f817, #fcfcfc);
+                width: 100vw;
+                top: 5.5px;
+                right: -36px;
+                z-index: -1;
+            }
+
+            .btn-wrap {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                row-gap: 25px;
+                align-items: center;
+
+                .btn-slider {
+                    background-color: $white;
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    border: none;
+                    transition: 0.5s;
+                    cursor: pointer;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                &.active {
+                    .btn-slider {
+                        transition: 0.5s;
+                        background-color: $pink;
+                    }
+                }
+            }
+
+            &.active {
+                transition: 0.5s;
+                background-color: $pink;
+            }
+        }
+
+        .slider__render {
+            display: none;
+
+            &.active {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .slider__svg-block {
+                opacity: 0;
+                transition: 1s linear;
+
+                &.active {
+                    transition: 1s linear;
+                    opacity: 1;
+                }
+            }
+
+            .slider__img-block {
+                .img-render-block {
+                    img {
+                        opacity: 0;
+                        transition: 1s;
+
+                        &.active {
+                            opacity: 1;
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

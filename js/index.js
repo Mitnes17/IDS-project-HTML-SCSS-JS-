@@ -80,3 +80,123 @@ let readMore = () => {
 };
 
 document.querySelector('.fishing__toggler').addEventListener('click', readMore);
+
+
+//slider 
+
+// function slider (e) {
+//   let target = e.target;
+  
+//   if (target.className === 'btn-slider') {
+//     render(target);
+//   }
+// }
+
+// function render (target) {
+//   let id = target.dataset.id;
+
+//   let selectedBtn = document.querySelector('.btn-slider.active');
+//   let selectedBlock = document.querySelector('.slider__render.active');
+//   let selectedSubBlock = document.querySelector('.slider__svg-block.active');
+//   let selectedImg = document.querySelector('img.active');
+
+//   if (selectedBtn || selectedBlock || selectedSubBlock) {
+//     selectedBlock.classList.remove('active');
+//     selectedBtn.classList.remove('active');
+//     selectedSubBlock.classList.remove('active');
+//     selectedImg.classList.remove('active');
+//   }
+
+//   selectedBtn = target;
+//   selectedBtn.classList.add('active');
+  
+//   selectedBlock = document.querySelector(`.slider__render[data-id="${id}"]`);
+//   selectedBlock.classList.add('active');
+
+//   selectedSubBlock = document.querySelector(`.slider__svg-block[data-id="${id}"]`);
+//   setTimeout(() => selectedSubBlock.classList.add('active'), 1);
+
+//   selectedImg = document.querySelector(`img[data-id="${id}"]`);
+//   setTimeout(() => selectedImg.classList.add('active'), 1);
+  
+//   let image = document.querySelectorAll('.img-border');
+
+//     switch (id) {
+//       case '1' : 
+//         image[0].style.borderColor = '#009fd6';
+//         break;
+//       case '2': 
+//         image[1].style.borderColor = '#f1ae2a';
+//         break;
+//       case '3': 
+//         image[2].style.borderColor = '#d84e30';
+//         break;
+//       case '4': 
+//         image[3].style.borderColor = '#8ec33c';
+//         break;
+//       case '5': 
+//         image[4].style.borderColor = '#c8da2d';
+//         break;
+//     }
+// }
+
+// document.querySelector('.slider__container').addEventListener('click', slider);
+
+function slider (e) {
+  let target = e.target.closest('.btn-wrap');
+  
+  if (target.className === 'btn-wrap') {
+    render(target);
+  }
+}
+
+function render (target) {
+  let id = target.dataset.id;
+  console.log(id);
+
+  let selectedBtn = document.querySelector('.btn-wrap.active');
+  let selectedBlock = document.querySelector('.slider__render.active');
+  let selectedSubBlock = document.querySelector('.slider__svg-block.active');
+  let selectedImg = document.querySelector('img.active');
+
+  if (selectedBtn || selectedBlock || selectedSubBlock) {
+    selectedBlock.classList.remove('active');
+    selectedBtn.classList.remove('active');
+    selectedSubBlock.classList.remove('active');
+    selectedImg.classList.remove('active');
+  }
+
+  selectedBtn = target;
+  selectedBtn.classList.add('active');
+  
+  selectedBlock = document.querySelector(`.slider__render[data-id="${id}"]`);
+  selectedBlock.classList.add('active');
+
+  selectedSubBlock = document.querySelector(`.slider__svg-block[data-id="${id}"]`);
+  setTimeout(() => selectedSubBlock.classList.add('active'), 1);
+
+  selectedImg = document.querySelector(`img[data-id="${id}"]`);
+  setTimeout(() => selectedImg.classList.add('active'), 1);
+  
+  let image = document.querySelectorAll('.img-border');
+
+    switch (id) {
+      case '1' : 
+        image[0].style.borderColor = '#009fd6';
+        break;
+      case '2': 
+        image[1].style.borderColor = '#f1ae2a';
+        break;
+      case '3': 
+        image[2].style.borderColor = '#d84e30';
+        break;
+      case '4': 
+        image[3].style.borderColor = '#8ec33c';
+        break;
+      case '5': 
+        image[4].style.borderColor = '#c8da2d';
+        break;
+    }
+}
+
+document.querySelector('.slider__container').addEventListener('click', slider);
