@@ -1,9 +1,3 @@
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  
-// } else {
-//   }
-
-//navbar hide
 
 // primary padding
 (function () {
@@ -11,7 +5,7 @@ const headerHeight = document.querySelector('.header').clientHeight;
 
 document.querySelector('.main-box').style.paddingTop = `${headerHeight}px`;
 })();
-
+//
 
 // padding switch depends on screen size
 window.addEventListener('resize', function() {
@@ -19,7 +13,7 @@ window.addEventListener('resize', function() {
 
   document.querySelector('.main-box').style.paddingTop = `${headerHeightDin}px`;
 });
-
+//
 
 // dinamic navbar hide
 let prevScrollpos = window.pageYOffset;
@@ -37,7 +31,7 @@ window.onscroll = () => {
   }
   prevScrollpos = currentScrollPos;
 }
-
+//
 
 //event function
 const body = document.querySelector('.body')
@@ -48,7 +42,7 @@ function navBar(e) {
   toggler.classList.toggle('active');
   body.classList.toggle('active'); //overflow
 }
-
+//
 
 //toggler event
 const toggler = document.querySelector('.btn-burger');
@@ -56,7 +50,7 @@ const toggler = document.querySelector('.btn-burger');
 if (toggler) {
   toggler.addEventListener('click', navBar);
 }
-
+//
 
 //event close with ESC
 document.addEventListener('keydown', (event) => {
@@ -66,7 +60,7 @@ document.addEventListener('keydown', (event) => {
     body.classList.remove('active');
   }
 });
-
+//
 
 //read more button
 let smooth = () => document.querySelector('.hide').classList.toggle('active');
@@ -80,71 +74,12 @@ let readMore = () => {
 };
 
 document.querySelector('.fishing__toggler').addEventListener('click', readMore);
-
+//
 
 //slider 
-
-// function slider (e) {
-//   let target = e.target;
-  
-//   if (target.className === 'btn-slider') {
-//     render(target);
-//   }
-// }
-
-// function render (target) {
-//   let id = target.dataset.id;
-
-//   let selectedBtn = document.querySelector('.btn-slider.active');
-//   let selectedBlock = document.querySelector('.slider__render.active');
-//   let selectedSubBlock = document.querySelector('.slider__svg-block.active');
-//   let selectedImg = document.querySelector('img.active');
-
-//   if (selectedBtn || selectedBlock || selectedSubBlock) {
-//     selectedBlock.classList.remove('active');
-//     selectedBtn.classList.remove('active');
-//     selectedSubBlock.classList.remove('active');
-//     selectedImg.classList.remove('active');
-//   }
-
-//   selectedBtn = target;
-//   selectedBtn.classList.add('active');
-  
-//   selectedBlock = document.querySelector(`.slider__render[data-id="${id}"]`);
-//   selectedBlock.classList.add('active');
-
-//   selectedSubBlock = document.querySelector(`.slider__svg-block[data-id="${id}"]`);
-//   setTimeout(() => selectedSubBlock.classList.add('active'), 1);
-
-//   selectedImg = document.querySelector(`img[data-id="${id}"]`);
-//   setTimeout(() => selectedImg.classList.add('active'), 1);
-  
-//   let image = document.querySelectorAll('.img-border');
-
-//     switch (id) {
-//       case '1' : 
-//         image[0].style.borderColor = '#009fd6';
-//         break;
-//       case '2': 
-//         image[1].style.borderColor = '#f1ae2a';
-//         break;
-//       case '3': 
-//         image[2].style.borderColor = '#d84e30';
-//         break;
-//       case '4': 
-//         image[3].style.borderColor = '#8ec33c';
-//         break;
-//       case '5': 
-//         image[4].style.borderColor = '#c8da2d';
-//         break;
-//     }
-// }
-
-// document.querySelector('.slider__container').addEventListener('click', slider);
-
 function slider (e) {
   let target = e.target.closest('.btn-wrap');
-  
+
   if (target.className === 'btn-wrap') {
     render(target);
   }
@@ -152,18 +87,13 @@ function slider (e) {
 
 function render (target) {
   let id = target.dataset.id;
-  console.log(id);
 
   let selectedBtn = document.querySelector('.btn-wrap.active');
   let selectedBlock = document.querySelector('.slider__render.active');
-  let selectedSubBlock = document.querySelector('.slider__svg-block.active');
-  let selectedImg = document.querySelector('img.active');
 
-  if (selectedBtn || selectedBlock || selectedSubBlock) {
+  if (selectedBtn || selectedBlock) {
     selectedBlock.classList.remove('active');
     selectedBtn.classList.remove('active');
-    selectedSubBlock.classList.remove('active');
-    selectedImg.classList.remove('active');
   }
 
   selectedBtn = target;
@@ -171,14 +101,11 @@ function render (target) {
   
   selectedBlock = document.querySelector(`.slider__render[data-id="${id}"]`);
   selectedBlock.classList.add('active');
-
-  selectedSubBlock = document.querySelector(`.slider__svg-block[data-id="${id}"]`);
-  setTimeout(() => selectedSubBlock.classList.add('active'), 1);
-
-  selectedImg = document.querySelector(`img[data-id="${id}"]`);
-  setTimeout(() => selectedImg.classList.add('active'), 1);
   
-  let image = document.querySelectorAll('.img-border');
+  //border-color switch
+  const width = document.querySelector('.body').offsetWidth;
+  const imageF = () => width > '1199' ? document.querySelectorAll('.img-border1') : document.querySelectorAll('.img-border');
+  const image = imageF();
 
     switch (id) {
       case '1' : 
@@ -200,3 +127,35 @@ function render (target) {
 }
 
 document.querySelector('.slider__container').addEventListener('click', slider);
+//
+
+//render-wrap dinamic size for overflow content
+const resizeObserver = new ResizeObserver(entries => {
+  for (let entry of entries) {
+    const width = document.querySelector('.body').offsetWidth;
+    const height = document.querySelector('.slider__render.active').clientHeight;
+    const backHeight = document.querySelector('.slider__back').clientHeight;
+
+    if (entry.target.className === 'render-wrap') {
+      if (width < '768') {
+        document.querySelector('.render-wrap').style.height = `${2 * height}px`;
+      }
+
+      if (width >= '768' && width < '1200') {
+          document.querySelector('.render-wrap').style.height = `${height}px`;
+      }
+
+      //dependence on back img
+      if (width > '1199') { 
+        if (height <= backHeight) {
+        document.querySelectorAll('.render-wrap').forEach(element =>
+          element.style.height = `${backHeight}px`
+        );
+        }
+      }
+    }
+  }
+});
+
+resizeObserver.observe(document.querySelector('.render-wrap'));
+//
