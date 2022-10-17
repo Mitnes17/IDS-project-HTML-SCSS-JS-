@@ -1662,7 +1662,7 @@ a:hover {
     max-width: 1214px;
   }
   .slider__container .slider__btn-container {
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .slider__container .slider__btn-container::after {
     width: 110%;
@@ -1716,6 +1716,258 @@ a:hover {
   }
   .render-wrap .slider__render.active .img-render-block img {
     border-radius: 0px 0px 6px 6px;
+  }
+}
+
+.circle {
+  margin-top: 35px;
+}
+@media (min-width: 768px) {
+  .circle {
+    margin-top: 70px;
+  }
+}
+@media (min-width: 1200px) {
+  .circle {
+    margin-top: 120px;
+    margin-bottom: 100px;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+  }
+}
+
+.circle__wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 50px;
+}
+.circle__wrap .circle__text {
+  padding: 55px 12px;
+  background-color: #fafafa;
+}
+.circle__wrap .circle__text h2 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.circle__wrap .circle__text p {
+  font-family: Mercury Text G2;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+.circle__wrap .circle__text .arrow__link {
+  text-transform: uppercase;
+  color: #e76ece;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+.circle__wrap .circle__text .arrow__link::after {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #e76ece;
+  margin-left: 21px;
+  margin-bottom: 3px;
+}
+.circle__wrap .circle__text .arrow__link i {
+  border: solid #e76ece;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  position: absolute;
+  margin-top: 5.5px;
+  margin-left: 44px;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+.circle__wrap .circle__circle {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, white 50%, #fafafa 50%);
+}
+.circle__wrap .circle__circle .circle__grand {
+  width: 285px;
+  height: 285px;
+  border-radius: 50%;
+  border: 1.5px solid #e76ece;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: border-color 0.5s linear;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small .circle__rotate {
+  border-radius: 50%;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: rotate 60s linear infinite;
+          animation: rotate 60s linear infinite;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.circle__wrap .circle__circle .circle__grand .circle__small .circle__rotate .circle__dot {
+  margin: 0;
+  position: absolute;
+  top: -101px;
+  left: calc(50% - 8px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 4px solid #e76ece;
+  background-color: white;
+  transition: border-color 0.5s linear;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small > figure {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 1px solid #e76ece;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: border-color 0.5s linear;
+  background-color: white;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small > figure figcaption {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small > figure figcaption h6 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small > figure figure {
+  margin-top: 38px;
+  width: 49px;
+  height: 49px;
+  background-color: #e76ece;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s linear;
+}
+.circle__wrap .circle__circle .circle__grand .circle__small > figure figure img {
+  width: 25px;
+  height: 25px;
+}
+@media (min-width: 768px) {
+  .circle__wrap {
+    flex-direction: row;
+  }
+  .circle__wrap .circle__text {
+    padding: 70px 84px 70px 32px;
+  }
+  .circle__wrap .circle__circle {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    background: linear-gradient(to left, white 50%, #fafafa 50%);
+  }
+}
+@media (min-width: 1200px) {
+  .circle__wrap {
+    max-width: 1218px;
+    margin: auto;
+    justify-content: center;
+  }
+  .circle__wrap::before {
+    content: "";
+    background: #fafafa;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+  }
+  .circle__wrap .circle__text {
+    max-width: 440px;
+    padding: 171px 190px 171px 0px;
+  }
+  .circle__wrap .circle__text h2 {
+    font-family: Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .circle__wrap .circle__text p {
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .circle__wrap .circle__text .arrow__link {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+  .circle__wrap .circle__text .arrow__link i {
+    margin-top: 8px;
+  }
+  .circle__wrap .circle__circle {
+    margin-right: 0px;
+  }
+  .circle__wrap .circle__circle .circle__grand {
+    width: 480px;
+    height: 480px;
+  }
+  .circle__wrap .circle__circle .circle__grand .circle__small .circle__rotate .circle__dot {
+    width: 15px;
+    height: 15px;
+    border-width: 6px;
+    top: -203px;
+  }
+  .circle__wrap .circle__circle .circle__grand .circle__small > figure {
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+  }
+  .circle__wrap .circle__circle .circle__grand .circle__small > figure figure {
+    width: 80px;
+    height: 80px;
+  }
+  .circle__wrap .circle__circle .circle__grand .circle__small > figure figure img {
+    width: 42px;
+    height: 38px;
   }
 }
 

@@ -1,3 +1,4 @@
+import {colors, textCount, textSpace} from "./Circle.js";
 
 // primary padding
 (function () {
@@ -158,4 +159,38 @@ const resizeObserver = new ResizeObserver(entries => {
 });
 
 resizeObserver.observe(document.querySelector('.render-wrap'));
+//
+
+//interval setting circle color and text
+setInterval(function iter() {
+
+  //colors of the circle
+  colors.forEach((elem, i) => {
+    setTimeout(() => {
+      document.querySelector('.circle__grand').style.borderColor = elem; 
+      document.querySelector('div.circle__small > figure').style.borderColor = elem; 
+      document.querySelector('.circle__dot').style.borderColor = elem; 
+      document.querySelector('.circle__center').style.backgroundColor = elem; 
+    }, 
+      i * 5000)
+  });
+
+  //text in the circle
+  textSpace.forEach((elem, i) => {
+    setTimeout(() => {
+      document.querySelector('.circle__space').innerHTML = elem;
+    },
+    i * 5000)
+  });
+
+  //count in the circle
+  textCount.forEach((elem, i) => {
+    setTimeout(() => {
+      document.querySelector('.circle__count').innerHTML = elem;
+    },
+    i * 5000)
+  });
+  
+  return iter;
+}(), 60000);
 //
