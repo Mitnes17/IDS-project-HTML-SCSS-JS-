@@ -38,28 +38,6 @@
         padding-bottom: 64px;
         text-transform: uppercase;
         color: $white;
-        position: relative;
-
-        &::after {
-          display: inline-block;
-          content: "";
-          width: 30px;
-          height: 3px;
-          background-color: $white;
-          margin-left: 21px;
-          margin-bottom: 3px;
-        }
-
-        i {
-          border: solid $white;
-          border-width: 0 3px 3px 0;
-          padding: 3px;
-          position: absolute;
-          margin-top: 5.5px;
-          margin-left: 44px;
-          display: inline-block;
-          transform: rotate(-45deg);
-        }
       }
     }
 

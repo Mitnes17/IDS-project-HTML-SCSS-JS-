@@ -1,4 +1,4 @@
-import {colors, textCount, textSpace} from "./Circle.js";
+import {circle} from "./Circle.js";
 
 // primary padding
 (function () {
@@ -71,7 +71,7 @@ let readMore = () => {
   document.querySelector('.fishing__toggler').classList.toggle('active');
   document.querySelector('.fishing__point').classList.toggle('active');
   document.querySelector('.fishing__points').classList.toggle('active');
-  setTimeout(smooth, 10);
+  setTimeout(smooth, 1);
 };
 
 document.querySelector('.fishing__toggler').addEventListener('click', readMore);
@@ -164,31 +164,18 @@ resizeObserver.observe(document.querySelector('.render-wrap'));
 //interval setting circle color and text
 setInterval(function iter() {
 
-  //colors of the circle
-  colors.forEach((elem, i) => {
+  circle.forEach((elem) => {
     setTimeout(() => {
-      document.querySelector('.circle__grand').style.borderColor = elem; 
-      document.querySelector('div.circle__small > figure').style.borderColor = elem; 
-      document.querySelector('.circle__dot').style.borderColor = elem; 
-      document.querySelector('.circle__center').style.backgroundColor = elem; 
+      document.querySelector('.circle__grand').style.borderColor = elem.color; 
+      document.querySelector('div.circle__small > figure').style.borderColor = elem.color; 
+      document.querySelector('.circle__dot').style.borderColor = elem.color; 
+      document.querySelector('.circle__center').style.backgroundColor = elem.color; 
+      document.querySelector('.circle__space').innerHTML = elem.text;
+      document.querySelector('.circle__count').innerHTML = elem.count;
+      let style = window.getComputedStyle(document.querySelector('.circle__rotate'));
+      console.log(style.transform);
     }, 
-      i * 5000)
-  });
-
-  //text in the circle
-  textSpace.forEach((elem, i) => {
-    setTimeout(() => {
-      document.querySelector('.circle__space').innerHTML = elem;
-    },
-    i * 5000)
-  });
-
-  //count in the circle
-  textCount.forEach((elem, i) => {
-    setTimeout(() => {
-      document.querySelector('.circle__count').innerHTML = elem;
-    },
-    i * 5000)
+      (elem.id - 1) * 5000)
   });
   
   return iter;

@@ -768,26 +768,6 @@ a:hover {
   padding-bottom: 64px;
   text-transform: uppercase;
   color: white;
-  position: relative;
-}
-.footer .footer__container .footer__left-part .footer__contact::after {
-  display: inline-block;
-  content: "";
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin-left: 21px;
-  margin-bottom: 3px;
-}
-.footer .footer__container .footer__left-part .footer__contact i {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-  position: absolute;
-  margin-top: 5.5px;
-  margin-left: 44px;
-  display: inline-block;
-  transform: rotate(-45deg);
 }
 .footer .footer__container .footer__right-part h2 {
   padding-bottom: 35px;
@@ -1315,26 +1295,6 @@ a:hover {
   padding-bottom: 64px;
   text-transform: uppercase;
   color: white;
-  position: relative;
-}
-.slider__render .slider__read-more::after {
-  display: inline-block;
-  content: "";
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  margin-left: 21px;
-  margin-bottom: 3px;
-}
-.slider__render .slider__read-more i {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-  position: absolute;
-  margin-top: 5.5px;
-  margin-left: 44px;
-  display: inline-block;
-  transform: rotate(-45deg);
 }
 .slider__render .slider__svg-block img {
   width: 60px;
@@ -1769,7 +1729,7 @@ a:hover {
   text-align: left;
   margin-bottom: 40px;
 }
-.circle__wrap .circle__text .arrow__link {
+.circle__wrap .circle__text a {
   text-transform: uppercase;
   color: #e76ece;
   font-size: 14px;
@@ -1778,24 +1738,8 @@ a:hover {
   letter-spacing: 1px;
   text-align: left;
 }
-.circle__wrap .circle__text .arrow__link::after {
-  display: inline-block;
-  content: "";
-  width: 30px;
-  height: 3px;
-  background-color: #e76ece;
-  margin-left: 21px;
-  margin-bottom: 3px;
-}
-.circle__wrap .circle__text .arrow__link i {
-  border: solid #e76ece;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-  position: absolute;
-  margin-top: 5.5px;
-  margin-left: 44px;
-  display: inline-block;
-  transform: rotate(-45deg);
+.circle__wrap .circle__text a .arrow {
+  color: #e76ece;
 }
 .circle__wrap .circle__circle {
   display: flex;
@@ -1974,6 +1918,35 @@ a:hover {
     width: 42px;
     height: 38px;
   }
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  color: white;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-width: 3px 3px 0 0;
+  border-style: solid;
+  transform: rotate(45deg);
+}
+.arrow::before {
+  content: "";
+  right: 0;
+  top: -2.5px;
+  position: absolute;
+  height: 3px;
+  box-shadow: inset 0 0 0 32px;
+  transform: rotate(-45deg);
+  width: 30px;
+  transform-origin: right top;
+  box-sizing: border-box;
+}
+.arrow::after {
+  content: "";
+  box-sizing: border-box;
 }
 
 @font-face {
