@@ -71,7 +71,7 @@ let readMore = () => {
   document.querySelector('.fishing__toggler').classList.toggle('active');
   document.querySelector('.fishing__point').classList.toggle('active');
   document.querySelector('.fishing__points').classList.toggle('active');
-  setTimeout(smooth, 1);
+  setTimeout(smooth, 10);
 };
 
 document.querySelector('.fishing__toggler').addEventListener('click', readMore);

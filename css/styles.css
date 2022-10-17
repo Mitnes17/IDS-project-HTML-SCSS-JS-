@@ -1033,7 +1033,6 @@ a:hover {
     margin-bottom: 0px;
   }
   .fishing__main .fishing__text {
-    padding: 120px 114px 93px 115px;
     margin-top: 120px;
     margin-right: 0;
   }
@@ -1066,6 +1065,11 @@ a:hover {
     line-height: 27px;
     letter-spacing: 0px;
     text-align: left;
+  }
+}
+@media (min-width: 1350px) {
+  .fishing__main .fishing__text {
+    padding: 120px 114px 93px 115px;
   }
 }
 
@@ -1155,6 +1159,7 @@ a:hover {
   background: #f37e26;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 .fishing__toggler::after, .fishing__toggler::before {
   content: "";

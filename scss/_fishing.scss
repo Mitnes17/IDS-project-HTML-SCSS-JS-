@@ -227,7 +227,6 @@
     }
 
     .fishing__text {
-      padding: 120px 114px 93px 115px;
       margin-top: 120px;
       margin-right: 0;
 
@@ -264,6 +263,11 @@
         letter-spacing: 0px;
         text-align: left;
       }
+    }
+  }
+  @media (min-width: 1350px) {
+    .fishing__text {
+      padding: 120px 114px 93px 115px;
     }
   }
 }
